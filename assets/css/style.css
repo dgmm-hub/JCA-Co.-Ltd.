@@ -1,3 +1,42 @@
+:root{
+  /* カラー（ここだけいじれば全体が変わる） */
+  --brand: #0ea5e9;         /* 基本アクセント（ボタン/リンク） */
+  --brand-ink: #ffffff;     /* アクセント上の文字色 */
+  --ink: #0f172a;           /* 本文色 */
+  --muted: #475569;         /* 補足/薄い文字色 */
+  --line: #e2e8f0;          /* 罫線 */
+  --bg: #ffffff;            /* 背景 */
+  --bg-soft: #f8fafc;       /* フッター等の淡背景 */
+
+  /* 形・余白・幅（全体の“雰囲気”をまとめて変更） */
+  --radius: 16px;           /* 角丸 */
+  --shadow: 0 6px 20px rgba(2,6,23,.08); /* カード影 */
+  --container: 1100px;      /* 本文最大幅 */
+
+  /* タイポ（見出しスケール） */
+  --fs-h1: clamp(1.8rem, 3vw, 2.6rem);
+  --fs-h2: 1.4rem;
+  --fs-h3: 1.15rem;
+}
+
+/* 既存ルールの一部を変数で置き換え（主な箇所だけ例示） */
+body{ color: var(--ink); background: var(--bg); }
+.container{ width: min(var(--container), 92%); margin: 0 auto; }
+
+.site-header{ border-bottom:1px solid var(--line); background:#fff; }
+.site-header .nav a:hover{ background:#f1f5f9; border-radius:.5rem; }
+
+.site-footer{ border-top:1px solid var(--line); background: var(--bg-soft); }
+
+.card{ border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.btn{ background: var(--brand); color: var(--brand-ink); border-radius: calc(var(--radius) - 4px); }
+.btn:hover{ opacity:.9; text-decoration:none; }
+
+h1{ font-size: var(--fs-h1); }
+h2{ font-size: var(--fs-h2); }
+h3{ font-size: var(--fs-h3); }
+
+.muted{ color: var(--muted); }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
