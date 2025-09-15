@@ -108,3 +108,23 @@ input[type="text"], input[type="email"], textarea {
 .hidden { display: none; }
 .consent { display: flex; gap: .5rem; align-items: center; font-weight: 400; }
 .contact-alt { margin-top: 1rem; color: #334155; }
+
+/* ==== トップページ（index）だけ背景を画像に ==== */
+.home .hero{
+  /* 画像＋暗めグラデで文字の可読性UP */
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url('/assets/img/hero-dark.webp') center/cover no-repeat;
+  color: #fff;
+  min-height: 52vh;
+  display: flex; align-items: center;
+}
+
+/* ヒーロー内の文字・ボタンを白系に */
+.home .hero h1,
+.home .hero .lead { color:#fff; }
+.home .hero .btn{
+  background: rgba(255,255,255,.18);
+  color:#fff;
+  border: 1px solid rgba(255,255,255,.4);
+}
