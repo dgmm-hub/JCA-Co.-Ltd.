@@ -128,3 +128,41 @@ input[type="text"], input[type="email"], textarea {
   color:#fff;
   border: 1px solid rgba(255,255,255,.4);
 }
+/* ==== トップページ：featuresを横4列にする ==== */
+.features .feature-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* 4列でも窮屈になりすぎないよう調整 */
+.features .feature-list .card {
+  padding: 1.25rem;
+}
+
+.features .feature-list .card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.features .feature-list .card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* タブレットでは2列 */
+@media (max-width: 900px) {
+  .features .feature-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマホでは1列 */
+@media (max-width: 600px) {
+  .features .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
